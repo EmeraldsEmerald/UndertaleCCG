@@ -1,0 +1,51 @@
+<span v-on:mousedown.left="handleClick" :style="{'opacity':opacity}">
+    <div :style="calcStyle()">
+        <div class = "card" v-if="card.type==0">
+          <img draggable = "false" :src = "getCardFrame(card.cardFrameState,card.type)"/>
+          <div class = "cardName">{{card.name}}</div>
+          <div class = "cardCost">{{card.finalCost!=null?card.finalCost:card.baseCost}}</div>
+          <div class = "cardHP" style = "color:green">{{card.realHP!=null?card.realHP:card.baseHP}}</div>
+          <div class = "cardAttack" style="color:red">{{card.realAttack!=null?card.realAttack:card.baseAttack}}</div>
+          <div class = "cardAbility">
+            <span v-for="part in card.compiledTextbox">
+              <span v-if="part.type==plain">
+                {{part.value}}
+              </span>
+              <span v-if="part.type==kw" style = "text-decoration: underline;">
+                {{part.value}}
+              </span>
+            </span>
+          </div>
+          <div v-if="card.finalKeywords&&card.finalKeywords.length>0">
+            <div v-for="(keyword,i) in card.finalKeywords" v-on:click.right.prevent="$emit('set-overlay-text',keyword+': '+getKeywordData(keyword).description)" class = "cardKeyword" :style = "{left:calcKeywordX(i)}">
+              <img style="height: 16px; width: 16px" src = "images/Placeholder.png"/>
+            </div>
+          </div>
+        </div>
+        <div class = "card" v-if="card.type==1">
+          <img draggable="false" :src = "getCardFrame(card.cardFrameState,card.type)"/>
+          <div class = "cardName">{{card.name}}</div>
+          <div class = "cardCost">{{card.finalCost!=null?card.finalCost:card.baseCost}}</div>
+          <div class = "cardAbility">
+            <span v-for="part in card.compiledTextbox">
+              <span v-if="part.type==plain">
+                {{part.value}}
+              </span>
+              <span v-if="part.type==kw" style = "text-decoration: underline;">
+                {{part.value}}
+              </span>
+            </span>
+          </div>
+        </div>
+        <div v-if='tempCard!=null'>
+          <card
+          style = "position:absolute;"
+          :style = '{left: "120px",top:"-20px","z-index":1235}'
+          :card = 'tempCard'
+          :opacity = '0.8'
+          :get-card-data = 'getCardData'
+          :active = 'false'
+          />
+        </div>
+      </div>
+  </span>

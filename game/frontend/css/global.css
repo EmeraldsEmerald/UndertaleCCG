@@ -1,0 +1,27 @@
+body {
+  background-color: gray;
+}
+
+#title {
+  text-align: center;
+  align-content: center;
+  margin-top: auto;
+}
+
+a {
+  text-align: center;
+  align-content: center;
+}
+
+.menu {
+  margin: auto;
+  text-align: center;
+  padding-right: 20px;
+}
+
+#navBar {
+  margin: auto;
+  width: 98%;
+  border: 3px solid white;
+  padding: 10px;
+}

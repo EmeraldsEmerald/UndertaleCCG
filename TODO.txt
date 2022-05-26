@@ -1,0 +1,18 @@
+Deck array
+Hand array
+Board array
+
+Classes! Probably
+
+Superclass: Game
+
+- Player (soul (real))
+
+- Card
+-- Equips
+--- ???
+-- Nonequips
+--- Monsters
+--- Spells
+
+shut up
