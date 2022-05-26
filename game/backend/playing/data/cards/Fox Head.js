@@ -7,7 +7,7 @@ card = {
     baseCost: 3,
     baseAttack: 3,
     baseHP: 3,
-    textbox: "{{kw:Encounter}}: Deal 1 DMG to the leftmost and rightmost enemy monster.",
+    textbox: "[[kw:Encounter:Encounter]]: Deal 1 DMG to the leftmost and rightmost enemy monster.",
     imageSource: "",
     rarity: 0,
     soul: 0,

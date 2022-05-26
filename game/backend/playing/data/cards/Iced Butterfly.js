@@ -7,7 +7,7 @@ card = {
     baseCost: 1,
     baseAttack: 1,
     baseHP: 1,
-    textbox: "{{kw:Encounter}}: Summon a {{cardReference:8}}",
+    textbox: "[[kw:Encounter:Encounter]]: Summon an {Iced Butterfly}}.",
     imageSource: "",
     rarity: 0,
     soul: 0,

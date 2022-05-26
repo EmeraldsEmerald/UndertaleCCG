@@ -13,8 +13,13 @@ class Player {
         this.game = game
         this.name = name
         this.deck = []
-        for (let d = 0; d < 30; ++d) {
+        /*for (let d = 0; d < 30; ++d) {
             this.directAddToDeck(3 * (d%2), "bottomOfDeck")
+        }*/
+
+        //Temporary "add every single card to deck woo!"
+        for (let i in cardList) {
+            this.directAddToDeck(i, "bottomOfDeck")
         }
 
         this.listenerEmitter = new ListenerEmitter(this.game)

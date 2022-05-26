@@ -7,7 +7,7 @@ card = {
     baseCost: 6,
     baseAttack: 4,
     baseHP: 5,
-    textbox: "{{kw:Encounter}}: Kill a monster.",
+    textbox: "[[kw:Encounter:Encounter]]: Kill a monster.",
     imageSource: "",
     rarity: 0,
     soul: 0,

@@ -7,7 +7,7 @@ card = {
     baseCost: 5,
     baseAttack: 2,
     baseHP: 2,
-    textbox: "{{kw:Encounter}}: Deal 2 DMG to all enemy monsters.",
+    textbox: "[[kw:Encounter:Encounter]]: Deal 2 DMG to all enemy monsters.",
     imageSource: "",
     rarity: 0,
     soul: 0,
