@@ -30,7 +30,7 @@ class Game {
         this.addHistoryListeners()
 
         for (let j = 0; j < 6; ++j) this.players[0].directAddToHand(j)
-        this.players[0].directAddToHand(21)
+        this.players[0].directAddToHand(13)
     }
 
     get stackClosed() {

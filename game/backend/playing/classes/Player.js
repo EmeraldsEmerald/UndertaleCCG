@@ -372,7 +372,7 @@ class Player {
                 () => {
                     this.hand.splice(handSlot, 0, card)
                     this.addAnimation("updateAllyCards", { value: this.hand.length })
-                    this.addAnimation("addCardHandPos", { pos: handSlot, card: card })
+                    this.addAnimation("addCardHandPos", { pos: handSlot, card: card.getSendableData() })
                 }
             )
             return
