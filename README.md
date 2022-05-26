@@ -1,2 +1,2 @@
 # UndertaleCCG
- Read the name dumbass
+ Read the name

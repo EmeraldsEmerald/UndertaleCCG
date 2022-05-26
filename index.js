@@ -6,13 +6,16 @@ console.log("Hello! Card List! ", cardList)
 module.exports = { cardList }
 const helmet = require('helmet');
 const { Server } = require('ws');
+const path = require('path')
+const PORT = process.env.PORT || 8081
 
 let app = express()
     .use(helmet({
         contentSecurityPolicy: false,
     }))
-    .use(express.static(__dirname + "/game/frontend"))
-    .listen(process.env.PORT || 8081)
+    .use(express.static(path.join(__dirname, 'game', 'frontend'), { index: 'game.html' }))
+//    .get('/', (req, res) => res.render('game'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`, __dirname))
 
 const newGame = new Game(0, [], ["Strezah", "Sktima"])
 
